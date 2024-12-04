@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #272E30;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.page-container {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.app-logo {
+    width: 400px;
+    height: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.app-logo:hover {
+    transform: scale(1.15);
+}
+
+.app-title {
+    font-size: 5rem;
+    color: #fff;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #42316c;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-bottom: 3.5rem;
+}
+
+.download-button:hover {
+    background-color: #503b7a;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(66, 49, 108, 0.4);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 20px; /* Aseguré que los bordes sean más visiblemente redondeados */
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid transparent; /* Añadí un borde más ancho */
+    background-image: linear-gradient(white, white), linear-gradient(45deg, #ff5959, #ffad4e, #59ffa0, #5e76ff, #a45eff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #272E30;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-container {
+        padding: 2rem;
+        margin-top: 5rem;
+    }
+
+    .app-title {
+        font-size: 3.5rem;
+    }
+
+    .app-logo {
+        width: 250px;
+    }
+
+    .download-button {
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .feature-card {
+        max-width: 100%;
+    }
+}
+
+/* Efecto de pulsación para el logo */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 1s ease-in-out;
+}
+
+/* Efecto de salto en el botón de descarga */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.bounce {
+    animation: bounce 1s ease-in-out;
+}
+
+/* Efecto de rotación para las tarjetas */
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(10deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.rotate {
+    animation: rotate 0.8s ease-in-out;
+}
+
