@@ -1,6 +1,6 @@
-document.querySelector('.download-button').addEventListener('click', function(e) {
-    e.preventDefault();
+document.querySelector('.download-button').addEventListener('click', function() {
     alert('¡Gracias por descargar CheckApp!');
+    
 });
 
 document.addEventListener("DOMContentLoaded", function() {
