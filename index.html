@@ -11,9 +11,11 @@
         <img src="assets/logo-check-app.png" alt="Logo CheckApp" class="app-logo">
         <div class="main-content">
             <h1 class="app-title">CheckApp</h1>
-            <!-- Actualiza el href para apuntar al archivo APK -->
             <a href="app-release.apk" class="download-button" download>Descarga Aquí</a>
+            <p class="texto qr">O escanea el código QR para descargar:</p>
+            <canvas id="qr-code"></canvas> <!-- Contenedor para el QR -->
         </div>
+        
         <div class="cards-container">
             <div class="feature-card">
                 <h3>Registro de Asistencia</h3>
@@ -29,6 +31,10 @@
             </div>
         </div>
     </div>
+    <!-- Bibliotecas y scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <script src="script.js"></script>
+    
+    
 </body>
 </html>
