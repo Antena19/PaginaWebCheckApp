@@ -1,3 +1,7 @@
+document.querySelector('.download-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('¡Gracias por descargar CheckApp!');
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     // Efecto de pulsación para el logo
@@ -28,4 +32,32 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona el elemento canvas
+    const qrContainer = document.getElementById("qr-code");
+
+    // URL de tu APK
+    const appUrl = "https://antena19.github.io/PaginaWebCheckApp/app-release.apk";
+
+    // Genera el código QR en el canvas
+    QRCode.toCanvas(qrContainer, appUrl, {
+        width: 300, // Ajusta el ancho del QR (más grande que el valor predeterminado)
+        margin: 2, // Margen alrededor del QR
+        color: {
+            dark: "#42316c", // Color del QR
+            light: "#ffffff", // Color de fondo
+        },      
+        
+    }, function (error) {
+        if (error) {
+            console.error("Error generando el QR:", error);
+        } else {
+            console.log("QR generado correctamente.");
+        }
+    });
+});
+
+
+
 
