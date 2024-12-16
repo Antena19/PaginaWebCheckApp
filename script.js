@@ -1,7 +1,8 @@
 document.querySelector('.download-button').addEventListener('click', function(e) {
-    e.preventDefault();
     alert('¡Gracias por descargar CheckApp!');
+    // Permitir la descarga del archivo
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Efecto de pulsación para el logo
