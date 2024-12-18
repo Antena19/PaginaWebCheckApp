@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const qrContainer = document.getElementById("qr-code");
 
     // URL de tu APK
-    const appUrl = "https://antena19.github.io/PaginaWebCheckApp/app-release.apk";
+    const appUrl = "https://antena19.github.io/PaginaWebCheckApp/CheckApp-1.0.apk";
 
     // Genera el código QR en el canvas
     QRCode.toCanvas(qrContainer, appUrl, {
